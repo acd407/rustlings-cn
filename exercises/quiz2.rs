@@ -18,8 +18,6 @@
 // - 输出是一个字符串类型的 Vector。
 // 这次没有提示！
 
-// I AM NOT DONE
-
 pub enum Command {
     Uppercase,
     Trim,
