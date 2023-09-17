@@ -20,7 +20,8 @@ impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
 // 你只能修改下一行
-fn compare_license_types(software: ??, software_two: ??) -> bool {
+// fn compare_license_types(software: impl Licensed, software_two: impl Licensed) -> bool {
+fn compare_license_types<T:Licensed,U:Licensed>(software: T, software_two: U) -> bool {
     software.licensing_info() == software_two.licensing_info()
 }
 
