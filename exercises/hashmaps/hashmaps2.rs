@@ -10,8 +10,6 @@
 //
 // 执行 `rustlings hint hashmaps2` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
-
 use std::collections::HashMap;
 
 #[derive(Hash, PartialEq, Eq)]
@@ -35,6 +33,12 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
     for fruit in fruit_kinds {
         // TODO: 如果水果不存在，则放入。
         // 注意，你不可以放入任何已存在的水果！
+        // if let None = basket.get(&fruit) {
+        //     basket.insert(fruit, 4)
+        // } else {
+        //     None
+        // };
+        basket.entry(fruit).or_insert(4);
     }
 }
 
