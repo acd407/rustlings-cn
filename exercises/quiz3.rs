@@ -12,8 +12,6 @@
 
 // 执行 `rustlings hint quiz3` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
-
 pub struct ReportCard<T> {
     pub grade: T,
     pub student_name: String,
