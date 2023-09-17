@@ -30,20 +30,59 @@ mod my_module {
     use super::Command;
 
     // TODO: 补全函数签名！
-    pub fn transformer(input: ???) -> ??? {
+    pub fn transformer(input: Vec<(String,Command)>) -> Vec<String> {
         // TODO: 完成 output 的声明！
-        let mut output: ??? = vec![];
+        let mut output = vec![];
         for (string, command) in input.iter() {
             // TODO: 完成函数体。你可以做到的！
+            let ans = match command {
+                Command::Uppercase => string.to_uppercase(),
+                Command::Trim => string.trim().to_string(),
+                Command::Append(i) => {
+                    let mut s = string.to_string();
+                    for _j in 0..*i {
+                        s.push_str("bar");
+                    }
+                    s
+                }
+            };
+            output.push(ans);
         }
         output
     }
 }
 
+mod my_module2 {
+    use super::Command;
+
+    // TODO: 补全函数签名！
+    pub fn transformer(input: Vec<(String,Command)>) -> Vec<String> {
+        // TODO: 完成 output 的声明！
+        let mut output = vec![];
+        for (string, command) in input.iter() {
+            // TODO: 完成函数体。你可以做到的！
+            let ans = match command {
+                Command::Uppercase => string.to_uppercase(),
+                Command::Trim => string.trim().into(),
+                Command::Append(i) => {
+                    let mut s:String = string.into();
+                    for _j in 0..*i {
+                        s.push_str("bar");
+                    }
+                    s
+                }
+            };
+            output.push(ans);
+        }
+        output
+    }
+}
+
+
 #[cfg(test)]
 mod tests {
     // TODO: 我们需要导入什么使作用域中有 `transformer`？
-    use ???;
+    use my_module2::transformer;
     use super::Command;
 
     #[test]
