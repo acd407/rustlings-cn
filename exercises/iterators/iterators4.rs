@@ -13,6 +13,7 @@ pub fn factorial(num: u64) -> u64 {
     // 额外的挑战，不要使用：
     // - 递归
     // 执行 `rustlings hint iterators4` 获取提示。
+    (1..=num).into_iter().fold(1, |acc, x| acc * x)
 }
 
 #[cfg(test)]
