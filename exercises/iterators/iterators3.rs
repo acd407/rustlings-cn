@@ -5,8 +5,6 @@
 // 2. 通过完成 result_with_list 和 list_of_results 函数使其余的测试通过。
 // 执行 `rustlings hint iterators3` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
-
 #[derive(Debug, PartialEq, Eq)]
 pub enum DivisionError {
     NotDivisible(NotDivisibleError),
