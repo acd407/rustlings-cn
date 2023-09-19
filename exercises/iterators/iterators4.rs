@@ -1,8 +1,6 @@
 // iterators4.rs
 // 执行 `rustlings hint iterators4` 或在观察模式下使用 `hint` 子命令来获取提示。
 
-// I AM NOT DONE
-
 pub fn factorial(num: u64) -> u64 {
     // 完成这个函数以返回 num 的阶乘
     // 不要使用
